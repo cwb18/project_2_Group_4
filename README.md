@@ -4,7 +4,7 @@
 
 Summary: Provide stock market advice based on a person's personal type. Data was used to narrow down 4 specific personality types and each personailty type is recommended a stock based on volatility
 
-This repository contains scripts for two deep learning recurrent neural network models. The first is a LSTM RNN model to predict stock prices for 10 tech stocks using historical closing price data. The stocks were sorted into three groups based on volatility. The second model was to clean and organize data based on personailty type.
+This repository contains scripts for two machine learning models. The first is a LSTM RNN model to predict stock prices for 10 tech stocks using historical closing price data. The stocks were sorted into three groups based on volatility. The second model was to clean and organize data based on personailty type.
 
 The first model has the following architecture:
 
