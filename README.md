@@ -1,5 +1,6 @@
 # project_2_Group_4
-lex bot stock advice
+
+# Amazon Lex Bot that gives stock advice
 
 Summary: Provide stock market advice based on a person's personal type. Data was used to narrow down 4 specific personality types and each personailty type is recommended a stock based on volatility
 
@@ -21,9 +22,9 @@ The first model has the following architecture:
 
 The following question was answered based on the model:
 
-1. Which Stock would you recommend based on the highest volatility?
+1. Which Stock would you recommend for each volatility group?
 
-Based on predicted returns, someone with high risk tolerance should buy FSR now and sell tomorrow.
+High_list Example: Based on predicted returns, someone with high risk tolerance should buy FSR now and sell tomorrow.
 
 ![image](https://user-images.githubusercontent.com/91438431/151613987-77b1aa8d-f382-4f3b-acf2-91ef49a271da.png)
 
@@ -37,7 +38,11 @@ Low List: MSFT, GOOGL, AAPL, AMZN
 
 A for loop was created to run the LSTM for each list providing the stock recommendation for each
 
+# Personality Type Data
+
 The second was used to clean data based on responses to personailty related questions
+
+data-final.csv was too large to upload to the repo
 
 Participants were categorized into 4 personality types
 
@@ -63,3 +68,35 @@ Principal Component Analysis (PCA) was used to reduce the number of variables of
 
 ![image](https://user-images.githubusercontent.com/91438431/151618551-2d3c2fa8-3597-4e90-9621-096957d81846.png)
 
+# Lambda data
+
+We used the following questions and parameters:
+
+1. How old are you? (we set a minimum age of 21?
+
+2. How much do you want to invest? (we set a minimum investment amount of $1,000)
+
+The bot had the 4 personality types inputted and the user was able to select their own personality type.
+
+The person's risk tolerance was used to  compile the stock grouping with similar risk
+
+AAPL has High expected returns with High Risk Factor 
+
+FSR has High expected returns with Medium Risk Factor 
+
+FB has Medium expected returns with Medium Risk Factor
+
+AMZN, GOOGL, MSFT have Medium expected returns with Low Risk Factor
+
+TSLA, TWTT &  NVDIA have Low expected returns with Low Risk Factor
+
+INTC  has  Low expected returns with High Risk Factor
+
+![image](https://user-images.githubusercontent.com/91438431/151674621-171f22be-8b00-4ca4-9195-4f6729e39290.png)
+
+
+# Amazon Lex Bot creation
+
+Amazon Lex was used to create the stock predicting bot
+
+A specific stock from one of the volatility groups was recommended based on the users personality type.
